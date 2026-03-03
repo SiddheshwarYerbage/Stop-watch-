@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    border-radius: 40px;
+    padding: 40px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.display {
+    font-size: 4
+    
+    rem;
+    font-weight: bold;
+    color: #667eea;
+    margin: 30px 0;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 5px;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-start {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-start:hover:not(:disabled) {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.btn-stop {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-stop:hover:not(:disabled) {
+    background-color: #da190b;
+    transform: scale(1.05);
+}
+
+.btn-stop:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-reset {
+    background-color: #2196F3;
+    color: white;
+}
+
+.btn-reset:hover {
+    background-color: #0b7dda;
+    transform: scale(1.05);
+}
+
+.laps {
+    margin-top: 40px;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.laps h2 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#lapsList {
+    list-style: none;
+}
+
+#lapsList li {
+    background: #f9f9f9;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border-left: 4px solid #667eea;
+    color: #333;
+}
+
+#lapsList li:hover {
+    background: #f0f0f0;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .display {
+        font-size: 2.5rem;
+    }
+
+    .controls {
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        flex: 1;
+        min-width: 100px;
+    }
+}
